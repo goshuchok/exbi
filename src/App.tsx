@@ -1,25 +1,28 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Order } from './pages/Order';
+import './App.scss';
+// import 'boxicons/css/boxicons.min.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { AppLayout } from './components/layout/AppLayout';
+
+import './scss/app.scss';
+
+import Blank from './pages/Blank';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<AppLayout />}>
+          <Route index element={<Blank />} />
+          <Route path="/order" element={<Order />} />
+          <Route path="/balances" element={<Blank />} />
+          <Route path="/withdrawal" element={<Blank />} />
+          <Route path="/settings" element={<Blank />} />
+          <Route path="/support" element={<Blank />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 

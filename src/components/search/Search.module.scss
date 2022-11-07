@@ -1,0 +1,75 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  h1 {
+    font-family: Neue Montreal;
+    font-size: 96px;
+    font-weight: 400;
+    line-height: 96px;
+    letter-spacing: -0.02em;
+    text-align: left;
+    text-transform: uppercase;
+  }
+  .right {
+    display: flex;
+    align-items: center;
+    .search {
+      position: relative;
+      .icon {
+        position: absolute;
+        height: 14px;
+        width: 14px;
+        left: 19px;
+        top: 29px;
+        border-radius: 0px;
+      }
+      .input {
+        height: 68px;
+        width: 364px;
+        left: 0px;
+        top: 0px;
+        border-radius: 100px;
+        padding-left: 48px;
+        background-color: #e5e7eb;
+        border: none;
+        font-family: Neue Montreal;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0em;
+        text-align: left;
+      }
+    }
+    .form {
+      position: relative;
+      .data {
+        position: absolute;
+        top: 26px;
+        left: 21px;
+      }
+      .select {
+        height: 68px;
+        width: 287px;
+        left: 0px;
+        top: 0px;
+        border-radius: 100px;
+        padding: 22px 32px 22px 32px;
+        background-color: #e5e7eb;
+        border: none;
+        margin: 0 10px;
+      }
+    }
+
+    .filter {
+      height: 68px;
+      width: 68px;
+      left: 0px;
+      top: 0px;
+      border-radius: 100px;
+      padding: 24px;
+      background-color: #e5e7eb;
+    }
+  }
+}
